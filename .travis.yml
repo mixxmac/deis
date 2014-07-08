@@ -42,6 +42,7 @@ script:
   - make -C controller coverage
   - make -C docs
   - make -C logger test-unit
+  - bash contrib/util/validate-commits.sh
 
 after_success:
   - cd controller && coveralls
